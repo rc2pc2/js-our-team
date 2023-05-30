@@ -1,9 +1,3 @@
-/**
-BONUS 2:
-Organizzare i singoli membri in card/schede
- *
- */
-
 const teamMembers = [
 
    {
