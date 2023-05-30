@@ -50,6 +50,24 @@ for (let index = 0; index < teamMembers.length; index++) {
 }
 
 
+document.getElementById('button-team-adder').addEventListener('click', function(){
+   const name = document.getElementById('new-member-name').value;
+   const role = document.getElementById('new-member-role').value;
+   const image = document.getElementById('new-member-image').value;
+
+   addTeamMemberToContainer(name, role, image, teamWrapper);
+});
+
+
+/**
+ *
+ * Function that adds to an html container a new member card filled with the member's info.
+ *
+ * @param name A string containing the full name of the member to be added.
+ * @param role A string containing the role of the member to be added.
+ * @param imageSrc A string containing the full path of the member's picture to be added.
+ * @param container An HTML Node element which will contain the generated card.
+ */
 function addTeamMemberToContainer(name, role, imageSrc, container){
 
    if (!imageSrc.startsWith('http')){
@@ -71,13 +89,3 @@ function addTeamMemberToContainer(name, role, imageSrc, container){
       </div>
    </div>` ;
 }
-
-document.getElementById('button-team-adder').addEventListener('click', function(){
-
-   const name = document.getElementById('new-member-name').value;
-   const role = document.getElementById('new-member-role').value;
-   const image = document.getElementById('new-member-image').value;
-
-   addTeamMemberToContainer(name, role, image, teamWrapper);
-
-});
