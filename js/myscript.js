@@ -37,11 +37,14 @@ const teamMembers = [
 const teamWrapper = document.querySelector('div.team-wrapper');
 
 
-for (let index = 0; index < teamMembers.length; index++) {
-   const teamMember = teamMembers[index];
+// for (let index = 0; index < teamMembers.length; index++) {
+//    const teamMember = teamMembers[index];
 
-   addTeamMemberToContainer(teamMember.name, teamMember.role, teamMember.imageSrc, teamWrapper);
-}
+//    addTeamMemberToContainer(teamMember.name, teamMember.role, teamMember.imageSrc, teamWrapper);
+// }
+teamMembers.forEach((singleMember )=>{
+   addTeamMemberToContainer(singleMember.name, singleMember.role, singleMember.imageSrc, teamWrapper);
+});
 
 
 document.getElementById('button-team-adder').addEventListener('click', function(){
